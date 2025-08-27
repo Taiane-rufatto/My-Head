@@ -2,35 +2,72 @@
 <html lang="pt-br">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-
-    <title>Cabeça Girando </title>
-   
+  <title>Cabeça Girando</title>
 </head>
 
-<body>
+<body class="bg-dark text-light">
 
-
-    <div class="h-100 d-flex align-items-center justify-content-center">
-        <a href="./readme.html">
-            <img id="img" src="img/cabeca.jpg">
-        </a>
-
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">🌪 Cabeça Girando</a>
     </div>
+  </nav>
 
+  <!-- Conteúdo central -->
+   
+    <div class="h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
 
+    <a href="./readme.html">
+      <img id="img" src="img/download.jpg" class="rounded shadow-lg" width="250" alt="Cabeça Girando">
+    </a>
 
+        <a href="./readme.html">
+      <img id="img" src="img/download.jpg" class="rounded shadow-lg" width="250" alt="Cabeça Girando">
+    </a>
 
+    <button class="btn btn-outline-light mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Clique e Surpreenda-se 🚀
+    </button>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="js/main.js"></script>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">🎉 Surpresa!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Sua cabeça está girando! 🌟
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+  <script>
+    // Animações com GSAP
+    gsap.from("#titulo", { duration: 1.5, y: -50, opacity: 0, ease: "bounce" });
+    gsap.to("#img", { duration: 3, rotation: 360, repeat: -1, ease: "linear" });
+  </script>
 
 </body>
 
